@@ -1,10 +1,13 @@
  package L_22_Recursion_C_2;
 
+import java.util.Scanner;
+
 public class subsequence {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String ques = "abc";
+		Scanner sc = new Scanner(System.in);
+		String ques = sc.next();
 		PrintSub(ques,"");
 	}
 	public static void PrintSub(String ques, String ans) {
