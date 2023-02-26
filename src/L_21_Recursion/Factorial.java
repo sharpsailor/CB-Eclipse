@@ -8,10 +8,11 @@ public class Factorial {
 		System.out.println(Factorial(n));
 	} 
 	public static int Factorial(int n ) {
-		if(n==1) {
-			return 1;
-		}
-		return n*Factorial(n-1);
+//		if(n==1) {
+//			return 1;
+//		}
+//		return n*Factorial(n-1);
+		return n==1 ?1 :n*Factorial(n-1);
 	}
 
 }

@@ -1,6 +1,6 @@
-package L_22_Recursion_C_2;
+package L_21_Recursion;
 
-public class OddAndEven {
+public class TailPower {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -8,4 +8,3 @@ public class OddAndEven {
 	}
 
 }
-   
