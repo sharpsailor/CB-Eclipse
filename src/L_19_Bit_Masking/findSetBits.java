@@ -1,21 +1,20 @@
 package L_19_Bit_Masking;
 
-public class SetAndUnset {
+public class findSetBits {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int n = 84;
-		System.out.println(SetUnset(n)); 
+		System.out.println(Count(n));
 	}
-	public static int SetUnset(int n) {
-		int count=0;
+	public static int Count(int n) {
+		int count =0;
 		while(n>0) {
 			if((n&1)!=0) {
 				count++;
 			}
 			n=n>>1;
-		} 
+		}
 		return count;
 	}
-
 }
