@@ -21,9 +21,5 @@ public class dice_boardPath {
 		count=	PrintPath(curr+i,des,ans+i);
 		}
 		return count;
-//	int a1=	PrintPath(curr+1,des,ans+1);
-//	int a2=	PrintPath(curr+2,des,ans+2);
-//	int a3=	PrintPath(curr+3,des,ans+3);
-//		return a1+a2+a3;
 	}
 }

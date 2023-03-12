@@ -12,7 +12,7 @@ public class subset_target {
 			arr[i]=sc.nextInt();
 		}
 		int target = sc.nextInt();
-		System.out.println(subSet(arr,0,"",target,0));
+		System.out.println("\n"+subSet(arr,0,"",target,0));
 	}
 	public static int subSet(int[]arr , int i, String ans,int target,int sum) {
 		if(i==arr.length) {

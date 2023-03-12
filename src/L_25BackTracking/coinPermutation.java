@@ -4,8 +4,8 @@ public class coinPermutation {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int [] coin = {2,3,5,6};
-		int amount = 10;
+		int [] coin = {2,3,6,7};
+		int amount = 7;
 		Coin_Per(coin,amount,"");
 	}
 	public static void Coin_Per(int[]coin, int amount , String ans) {
@@ -13,7 +13,7 @@ public class coinPermutation {
 			System.out.println(ans);
 			return;
 		}
-		for(int i =00;i<coin.length;i++) {
+		for(int i =0;i<coin.length;i++) {
 			if(amount>=coin[i]) {
 				Coin_Per(coin, amount-coin[i],ans+coin[i] );
 			}

@@ -1,9 +1,10 @@
 package L_24Recursion;
-
+import java.util.*;
 public class Lexicographical_Counting {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
 		int n = 1000;
 		Counting(0,n);
 	}
@@ -13,7 +14,7 @@ public class Lexicographical_Counting {
 		}
 		
 		System.out.println(curr);
-		int i =0;
+	   	int i =0;
 		if(curr ==0) {
 			i=1;
 		}

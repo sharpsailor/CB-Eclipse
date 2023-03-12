@@ -22,7 +22,7 @@ public class QueenPermutation {
 				// call tabhi jab false ho 
 				if(board[i]==false) {
 					 board[i]=true;
-					 QueensPer(board, tq, ans+"b"+i+"q"+qpsf, qpsf+1);
+					 QueensPer(board, tq, ans+"b"+i+"q"+qpsf, qpsf+1);  
 					 board[i]=false;
 				}
 			}
