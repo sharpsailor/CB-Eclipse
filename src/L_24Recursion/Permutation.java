@@ -4,7 +4,13 @@ public class Permutation {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-			String str ="abc";
+		int n =3;
+		String str ="";
+		for (int i = 1; i <=n; i++) {
+			str+=i;
+		}
+		System.out.println(str);
+//			String str ="123";
 			String ans ="";
 			Permutation(str, ans);
 	}
