@@ -6,25 +6,39 @@ public class Chessboard {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
-		boolean[][] board = new boolean[n][n];
-		board[0][0]= true;
-		Chess(board,0,0, "{0,0}",n);
+		System.out.println("\n"+Chess(n, 0, 0, ""));
 	}
-	public static void Chess(int n , int cr , int cc , String ans ) {
+	public static int Chess(int n , int cr , int cc , String ans ) {
 		if(cr==n-1 && cc==n-1) {
-			System.out.println(ans+"{"+cr+"-"+cc+"} ");
+			System.out.print(ans+"{"+cr+"-"+cc+"} ");
 			return 1;
 		}
-		if(cr>=n)
+		if(cr>=n||cc>=n) {
+			return 0;
+		}
+		int count =0;
 //		Knight
-		Chess(n,cr+2,cc+1,ans+"{"+cr+"-"+cc+"}K");
-		Chess(n,cr+1,cc+2,ans+"{"+cr+"-"+cc+"}K");
+		count+=Chess(n,cr+2,cc+1,ans+"{"+cr+"-"+cc+"}K");
+		count+=Chess(n,cr+1,cc+2,ans+"{"+cr+"-"+cc+"}K");
 		
 //		Rook
-//		Column
-	for (int i = 0; i < =n; i++) {
+		if(cc==0||cr==0 ||cc==n-1||cr==n-1) {
+			for (int i = 1; i <=n; i++) {
+//			Column
+				count+=Chess(n, cr, cc + i, ans + "{" + cr + "-" + cc + "}R");
+//			Row
+				count+=Chess(n,cr+i,cc,ans+"{"+cr+"-"+cc+"}R");
+			}
+		}
+//		Bishop Move
+		if(cr==cc|| cr+cc==n-1) {
+			for (int i = 1; i <=n; i++) {
+				count+=Chess(n,cr+i,cc+i,ans+"{"+cr+"-"+cc+"}R");
+			}
+		}
 		
-	}
+		return count;
+
 		
 	}
 }
