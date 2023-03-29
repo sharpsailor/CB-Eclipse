@@ -14,13 +14,13 @@ public class combinationSum3 {
 	public static void ComSum(int n , int k , int curr,List<Integer> list , List<List<Integer>> ans,int idx) {
 		if(curr==k && n==0&& !Duplicates(ans,list)) {
 			ans.add(new ArrayList<>(list));
-			System.out.println(list);
+//			System.out.println(list);
 			return;
 		}
 		for(int i =idx;i<=9;i++) {
 			if(i<=n && curr<=k && !list.contains(i) ) {
 				list.add(i);
-				ComSum(n-i, k, curr+1, list, ans,idx+1);
+				ComSum(n-i, k, curr+1, list, ans,i+1);
 				list.remove(list.size()-1);
 			}
 		}

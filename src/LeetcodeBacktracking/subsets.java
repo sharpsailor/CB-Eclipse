@@ -23,5 +23,5 @@ public class subsets {
 				list.remove(list.size()-1);
 			}
 		}
-
+ 
 }

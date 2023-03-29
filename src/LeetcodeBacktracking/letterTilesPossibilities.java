@@ -6,16 +6,25 @@ public class letterTilesPossibilities {
 		// TODO Auto-generated method stub
 		String str ="AAABBC";
 		String ans ="";
-		System.out.println(Possibilities(str,ans));
+		System.out.print(Possibilities(str,ans));
 	}
-	public static int Possibilities(String ques, String ans) {
-		if(ques.length()==0) {
-//			System.out.println(ans);
-			return 1;
+	public static int  Possibilities(String ques, String ans) {
+		int count =0;
+		for (int i = 0; i < ques.length(); i++) {
+			char ch = ques.charAt(i);
+			boolean bool = false;
+			for(int j =i+1;j<ques.length();j++) {
+				if(ques.charAt(j)==ch) {
+					bool = true;
+					break;
+				}
+			}
+			if(bool == false) {
+				String s1 = ques.substring(0,i);
+				String s2 = ques.substring(i+1);
+				count+=Possibilities(s1+s2, ans+ch)+1;
+			}
 		}
-		char ch = ques.charAt(0);
-		int a1 =	Possibilities(ques.substring(1), ans);
-		int a2 =   Possibilities(ques.substring(1), ans+ch);
-		return a1+a2;
+		return count;
 	}
-}
+} 

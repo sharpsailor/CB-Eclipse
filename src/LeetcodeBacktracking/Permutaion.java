@@ -4,7 +4,7 @@ public class Permutaion {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int [] arr = {1,2,3};
+		int [] arr = {1,2,3,4};
 		boolean[] bool = new boolean[arr.length];
 		List<Integer> list = new ArrayList<>();
 		List<List<Integer>>ans = new ArrayList<>();

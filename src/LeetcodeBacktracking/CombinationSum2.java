@@ -4,8 +4,9 @@ public class CombinationSum2 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] candidates= {2,3,5,6};
+		int[] candidates= {10,1,2,7,6,1,5};
 		int target = 8;
+		Arrays.sort(candidates);
 		List<Integer> list = new ArrayList<>();
 		List<List<Integer>> ans = new ArrayList<>();
 		Sum_Com(candidates,target,list, ans,0);
@@ -25,7 +26,7 @@ public class CombinationSum2 {
 			if(candidates[i]<=target) {
 				int canTarget= target-candidates[i];
 				list.add(candidates[i]);
-				Sum_Com(candidates,canTarget,list,ans,i);
+				Sum_Com(candidates,canTarget,list,ans,i+1);
 				list.remove(list.size()-1);
 			}
 		}
